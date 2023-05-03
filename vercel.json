@@ -9,7 +9,7 @@
         },
         {
             "source": "/wiki/:path*",
-            "destination": "https://zh.wikipedia.org//:path*",
+            "destination": "https://zh.wikipedia.org/:path*",
             "headers": {
                 "host": "zh.wikipedia.org"
             }
