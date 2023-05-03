@@ -1,18 +1,32 @@
 {
-    "rewrites": [
+  "rewrites": [
+    {
+      "source": "/google/:path*",
+      "destination": "https://www.google.com/:path*"
+    },
+    {
+      "source": "/wiki/:path*",
+      "destination": "https://en.wikipedia.org/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/google/:path*",
+      "headers": [
         {
-            "source": "/google/:path*",
-            "destination": "https://www.google.com/:path*",
-            "headers": {
-                "host": "www.google.com"
-            }
-        },
-        {
-            "source": "/wiki/:path*",
-            "destination": "https://zh.wikipedia.org/:path*",
-            "headers": {
-                "host": "zh.wikipedia.org"
-            }
+          "key": "host",
+          "value": "www.google.com"
         }
-    ]
+      ]
+    },
+    {
+      "source": "/wiki/:path*",
+      "headers": [
+        {
+          "key": "host",
+          "value": "en.wikipedia.org"
+        }
+      ]
+    }
+  ]
 }
